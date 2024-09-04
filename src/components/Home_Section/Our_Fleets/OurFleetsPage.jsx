@@ -19,7 +19,8 @@ function OurFleetsPage() {
     useEffect(() => {
         let getSubCategory = async () => {
             try {
-                let temp = await axios.get(`http://localhost:8000/api/admin/filter/${type}`)
+                // let temp = await axios.get(`http://localhost:8000/api/admin/filter/${type}`)
+                let temp = await axios.get(`https://my-air-deal-server.vercel.app/api/admin/filter/${type}`)
                 setGetSubCategory(temp?.data?.sortedData || [])
             }
             catch(error){

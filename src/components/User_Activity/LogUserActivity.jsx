@@ -16,7 +16,8 @@ const LogUserActivity = () => {
                 const newLog = previousData + basePath;
                 
                 // Log the base path
-                axios.post('http://localhost:8000/api/admin/addlogs', { log: newLog })
+                // axios.post('http://localhost:8000/api/admin/addlogs', { log: newLog })
+                axios.post('https://my-air-deal-server.vercel.app/api/admin/addlogs', { log: newLog })
                     .catch(() => {
                         // Handle error silently
                     });

@@ -16,7 +16,8 @@ function TestimonialsPage() {
     useEffect(() => {
         const fetchExperience = async () => {
             try {
-                const response = await axios.get('http://localhost:8000/api/admin/getallfeedback');
+                // const response = await axios.get('http://localhost:8000/api/admin/getallfeedback');
+                const response = await axios.get('https://my-air-deal-server.vercel.app/api/admin/getallfeedback');
                 setShowAllExp(response.data.feedback);
             } catch (error) {
                 message.error('Internet is slow to get feedbacks');
