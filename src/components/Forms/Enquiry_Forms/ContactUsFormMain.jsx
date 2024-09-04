@@ -47,7 +47,8 @@ function ContactUsFormMain() {
         event.preventDefault();
 
         try {
-            await axios.post('http://localhost:8000/api/admin/addenquiry', formData);
+            // await axios.post('http://localhost:8000/api/admin/addenquiry', formData);
+            await axios.post('https://my-air-deal-server.vercel.app/api/admin/addenquiry', formData);
             setFormData({
                 enquiryname: '',
                 enquiryemail: '',

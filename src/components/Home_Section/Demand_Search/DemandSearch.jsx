@@ -22,7 +22,8 @@ const DemandSearch = () => {
     useEffect(() => {
         const sendData = async () => {
             try {
-                let response = await axios.post('http://localhost:8000/api/admin/demandsearch', parsedData);
+                // let response = await axios.post('http://localhost:8000/api/admin/demandsearch', parsedData);
+                let response = await axios.post('https://my-air-deal-server.vercel.app/api/admin/demandsearch', parsedData);
                 setResponseData(response?.data?.data || []);
                 message.success('Request successful');
             } catch (error) {
